@@ -1,9 +1,9 @@
 from openerp import models, fields, api
 
 
-class ImCustomer(models.Model):
-    _name = 'im.customer'
-    _description = 'Customer'
+class ImSeller(models.Model):
+    _name = 'im.seller'
+    _description = 'Seller'
 
     name = fields.Char(required=True)
 
@@ -23,5 +23,5 @@ class ImCustomer(models.Model):
         else:
             new_name = u"Copy of {} ({})".format(self.name, copied_count)
         default['name'] = new_name
-        return super(ImCustomer, self).copy(default)
+        return super(ImSeller, self).copy(default)
 

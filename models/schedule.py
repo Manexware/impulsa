@@ -1,11 +1,15 @@
 from openerp import models, fields, api
 
 
-class ImCustomer(models.Model):
-    _name = 'im.customer'
-    _description = 'Customer'
+class ImSchedule(models.Model):
+    _name = 'im.schedule'
+    _description = 'Schedule'
 
     name = fields.Char(required=True)
+    customer_id = fields.Many2one('im.customer')
+    seller_id = fields.Many2one('im.seller')
+    latitude = fields.Char()
+    longitude = fields.Char()
 
     _order = 'name'
 
@@ -23,5 +27,5 @@ class ImCustomer(models.Model):
         else:
             new_name = u"Copy of {} ({})".format(self.name, copied_count)
         default['name'] = new_name
-        return super(ImCustomer, self).copy(default)
+        return super(ImSchedule, self).copy(default)
 

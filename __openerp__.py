@@ -21,9 +21,13 @@
 
     ],
     'data': [
+        'views/customer_view.xml',
+        'views/seller_view.xml',
+        'views/schedule_view.xml',
+        'views/schedule_graph_view.xml',
         # 'security/sie_security.xml',
-        'security/ir.model.access.csv',
-        'menu/sie_menu.xml',
+        # 'security/ir.model.access.csv',
+        'menu/menu.xml',
     ],
 
     'installable': True,
