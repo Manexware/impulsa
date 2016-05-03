@@ -24,3 +24,4 @@ class ImCustomer(models.Model):
             new_name = u"Copy of {} ({})".format(self.name, copied_count)
         default['name'] = new_name
         return super(ImCustomer, self).copy(default)
+
