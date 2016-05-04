@@ -1,15 +1,19 @@
 from openerp import models, fields, api
+from openerp.addons.base_geoengine import geo_model
+from openerp.addons.base_geoengine import fields as geo_fields
 
 
-class ImSchedule(models.Model):
+class ImSchedule(geo_model.GeoModel):
     _name = 'im.schedule'
     _description = 'Schedule'
 
-    name = fields.Char(required=True)
+    name = fields.Char()
     customer_id = fields.Many2one('im.customer')
     seller_id = fields.Many2one('im.seller')
     latitude = fields.Char()
     longitude = fields.Char()
+    date = fields.Date()
+    the_point = geo_fields.GeoPoint('Coordinate Customer')
 
     _order = 'name'
 

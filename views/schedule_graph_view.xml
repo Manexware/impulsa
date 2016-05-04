@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <record model="ir.ui.view" id="view_im_schedule_grap">
+        <record model="ir.ui.view" id="view_im_schedule_graph">
             <field name="name">schedule.graph</field>
             <field name="model">im.schedule</field>
             <field name="arch" type="xml">
-                <graph string="Participations by Courses">
-                    <field name="customer_id"/>
-                    <field name="seller_id" type="measure"/>
+                <graph string="Sellers graph">
+                    <field name="date" interval="week"/>
+                    <field name="seller_id"/>
                 </graph>
+            </field>
+        </record>
+        <record id="view_im_schedule_pivot" model="ir.ui.view">
+            <field name="name">schedule.pivot</field>
+            <field name="model">im.schedule</field>
+            <field name="arch" type="xml">
+                <pivot string="Sellers pivot" display_quantity="false">
+                    <field name="date" interval="week" />
+                    <field name="seller_id" type="col" />
+                </pivot>
             </field>
         </record>
         <record model="ir.actions.act_window" id="act_open_im_schedule_view_graph">
             <field name="name">Schedule Graph</field>
             <field name="res_model">im.schedule</field>
             <field name="view_type">form</field>
-            <field name="view_mode">graph</field>
+            <field name="view_mode">graph,pivot</field>
         </record>
     </data>
 </openerp>
