@@ -1,5 +1,5 @@
 {
-    'name': 'Impulsa',
+    'name': 'Impulsa Core',
     'version': '1.0',
     'author': 'Manexware S.A.',
     'category': 'Education',

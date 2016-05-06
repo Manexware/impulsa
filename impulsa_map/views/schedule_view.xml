@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_im_schedule_map" model="ir.ui.view">
+            <field name="name">map</field>
+            <field name="model">im.schedule</field>
+            <field eval="16" name="priority"/>
+            <field name="arch" type="xml">
+                <geoengine>
+                    <field name="name"/>
+                </geoengine>
+            </field>
+        </record>
+
+        <record id="schedule_map_vector_layer" model="geoengine.vector.layer">
+            <field name="geo_field_id" ref="impulsa_core.field_im_schedule_the_point"/>
+            <field name="name">Customer</field>
+            <field eval="6" name="sequence"/>
+            <field name="view_id" ref="view_im_schedule_map"/>
+            <field name="geo_repr">basic</field>
+            <field eval="1" name="nb_class"/>
+            <field name="begin_color">#FF680A</field>
+        </record>
+
+        <record id="schedule_map_raster_layer" model="geoengine.raster.layer">
+            <field name="raster_type">mapbox</field>
+            <field name="mapbox_id">camptocamp.map-ok288g0c</field>
+            <field name="name">Schedule Mapbox</field>
+            <field name="view_id" ref="view_im_schedule_map"/>
+            <field eval="0" name="overlay"/>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="act_open_im_schedule_view">
+            <field name="name">Schedule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">im.schedule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,geoengine</field>
+            <field name="view_id" ref="impulsa_core.view_im_schedule_tree"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new schedule.
+                </p>
+            </field>
+        </record>
+        </data>
+</openerp>
