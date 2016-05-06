@@ -4,16 +4,16 @@
                   parent="" sequence="1"/>
 
 
-            <menuitem id="im_customer_menu"
-                      name="Customer"
-                      action="act_open_im_customer_view"
+            <menuitem id="im_seller_menu"
+                      name="Seller"
+                      action="act_open_hr_employee_inherit_view"
                       parent="im_main_menu"
                       groups="base.group_system"
                       sequence="1"/>
 
-            <menuitem id="im_seller_menu"
-                      name="Seller"
-                      action="act_open_im_seller_view"
+            <menuitem id="im_customer_menu"
+                      name="Customer"
+                      action="act_open_res_partner_inherit_view"
                       parent="im_main_menu"
                       groups="base.group_system"
                       sequence="2"/>
@@ -31,5 +31,20 @@
                       parent="im_main_menu"
                       groups="base.group_system"
                       sequence="4"/>
+
+            <!--<menuitem name="Employees"-->
+                      <!--id="hr.menu_hr_root"-->
+                      <!--groups="hide_menu_group_id"/>-->
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+            <field name="groups_id" eval="[(6, 0, [ref('hide_menu_group_id')] )]"/>
+        </record>
+
+            <!--<menuitem id="menu_hr_department_tree"-->
+                      <!--groups="hide_menu_group_id"/>-->
+
+            <!--<menuitem id="menu_hr_main" parent="menu_hr_root" name="Human Resources" sequence="0"/>-->
+            <!--<menuitem id="menu_hr_reporting_timesheet" name="Reports" parent="menu_hr_root" sequence="99" groups="base.group_hr_manager,base.group_hr_user"/>-->
+            <!--<menuitem id="menu_human_resources_configuration" name="Configuration" parent="menu_hr_root" sequence="100" groups="base.group_configuration,base.group_hr_manager"/>-->
+
     </data>
 </openerp>

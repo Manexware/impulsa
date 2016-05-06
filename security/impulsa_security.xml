@@ -1,0 +1,8 @@
+<openerp>
+    <data>
+            <record id="hide_menu_group_id" model="res.groups">
+                <field name="name">Hide menu</field>
+                <field name="category_id" ref="base.module_category_hidden"/>
+            </record>
+    </data>
+</openerp>

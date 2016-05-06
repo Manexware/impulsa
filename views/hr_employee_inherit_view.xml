@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_employee_inherit_view" model="ir.ui.view">
+            <field name="name">hr.employee.inherit.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Sessions">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </page>
+                </notebook>
+
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="act_open_hr_employee_inherit_view">
+            <field name="name">Seller</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new Seller.
+                </p>
+            </field>
+        </record>
+    </data>
+</openerp>

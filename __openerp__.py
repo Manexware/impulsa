@@ -16,15 +16,18 @@
     'summernote': [],
     'images': [],
     'depends': ['base',
+                'hr',
+                'base_geoengine',
     ],
     'demo': [
 
     ],
     'data': [
-        'views/customer_view.xml',
-        'views/seller_view.xml',
+        'views/hr_employee_inherit_view.xml',
+        'views/res_partner_inherit_view.xml',
         'views/schedule_view.xml',
         'views/schedule_graph_view.xml',
+        'security/impulsa_security.xml',
         # 'security/sie_security.xml',
         # 'security/ir.model.access.csv',
         'menu/menu.xml',
