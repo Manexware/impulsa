@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_im_hr_employee_group_im_manager_group,access_im_hr_employee,hr.model_hr_employee,im_manager_group,1,1,1,1
+access_im_res_partner_group_im_manager_group,access_im_res_partner,base.model_res_partner,im_manager_group,1,1,1,1
+access_im_schedule_group_im_manager_group,access_im_schedule,model_im_schedule,im_manager_group,1,1,1,1
+
+access_im_hr_employee_group_im_seller_group,access_im_hr_employee,hr.model_hr_employee,im_seller_group,1,1,1,1
+access_im_res_partner_group_im_seller_group,access_im_res_partner,base.model_res_partner,im_seller_group,1,0,0,0
+access_im_schedule_group_im_seller_group,access_im_schedule,model_im_schedule,im_seller_group,1,0,0,0
+
+
+

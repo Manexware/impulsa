@@ -1,8 +1,22 @@
 <openerp>
     <data>
-            <record id="hide_menu_group_id" model="res.groups">
-                <field name="name">Hide menu</field>
-                <field name="category_id" ref="base.module_category_hidden"/>
-            </record>
+        <record id="im_hide_menu_group" model="res.groups">
+            <field name="name">Hide menu</field>
+            <field name="category_id" ref="base.module_category_hidden"/>
+        </record>
+
+        <record id="module_category_impulsa" model="ir.module.category">
+            <field name="name">Impulsa</field>
+            <field name="description">Defined roles for actors for Impulsa</field>
+            <field name="sequence">31</field>
+        </record>
+        <record id="im_seller_group" model="res.groups">
+            <field name="name">Seller</field>
+            <field name="category_id" ref="module_category_impulsa"/>
+        </record>
+        <record id="im_manager_group" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_category_impulsa"/>
+        </record>
     </data>
 </openerp>
