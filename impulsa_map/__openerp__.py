@@ -23,6 +23,7 @@
     ],
     'data': [
         'views/schedule_view.xml',
+        'views/schedule_inherit_view.xml',
     ],
 
     'installable': True,

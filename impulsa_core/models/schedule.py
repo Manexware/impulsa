@@ -8,8 +8,8 @@ class ImSchedule(geo_model.GeoModel):
     _description = 'Schedule'
 
     name = fields.Char()
-    customer_id = fields.Many2one('res.partner')
-    seller_id = fields.Many2one('hr.employee')
+    customer_id = fields.Many2one('res.partner',string ='Seller')
+    seller_id = fields.Many2one('hr.employee',string ='Customer')
     latitude = fields.Float()
     longitude = fields.Float()
     date = fields.Date()

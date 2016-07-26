@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_schedule_inherit_view" model="ir.ui.view">
+            <field name="name">im.schedule.inherit.form</field>
+            <field name="model">im.schedule</field>
+            <field name="inherit_id" ref="impulsa_core.view_im_schedule_form"/>
+            <field name="arch" type="xml">
+                <field name="longitude" position="after">
+                    <field name="the_point" widget="geo_edit_map"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

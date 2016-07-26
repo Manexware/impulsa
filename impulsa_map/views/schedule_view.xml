@@ -8,7 +8,9 @@
             <field eval="16" name="priority"/>
             <field name="arch" type="xml">
                 <geoengine>
-                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="seller_id"/>
+                    <field name="create_date"/>
                 </geoengine>
             </field>
         </record>
@@ -23,14 +25,12 @@
             <field name="begin_color">#FF680A</field>
         </record>
 
-        <record id="schedule_map_raster_layer" model="geoengine.raster.layer">
-            <field name="raster_type">mapbox</field>
-            <field name="mapbox_id">camptocamp.map-ok288g0c</field>
-            <field name="name">Schedule Mapbox</field>
+        <record id="schedule_map_raster_layer_osm" model="geoengine.raster.layer">
+            <field name="raster_type">osm</field>
+            <field name="name">Schedule Map</field>
             <field name="view_id" ref="view_im_schedule_map"/>
-            <field eval="0" name="overlay"/>
+            <field eval="1" name="overlay"/>
         </record>
-
 
         <record model="ir.actions.act_window" id="act_open_im_schedule_view">
             <field name="name">Schedule</field>
